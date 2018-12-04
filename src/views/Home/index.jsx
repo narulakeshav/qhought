@@ -3,9 +3,11 @@
  * External Dependencies
  */
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
+import { toIdValue } from 'apollo-utilities';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { Link } from 'react-router-dom';
 
 /**
  * Internal Dependencies
@@ -35,6 +37,7 @@ import { HomeHeader, GradientBtn, CreateBtn } from './styles';
 const GET_QUOTES = gql`
   query allQuotes {
     quotes {
+      __typename
       _id
       background
       quote
@@ -46,6 +49,14 @@ const GET_QUOTES = gql`
     }
   }
 `;
+
+const cache = new InMemoryCache({
+  cacheRedirects: {
+    Query: {
+      quotes: (_, args) => args.ids.map((id) => toIdValue(cache.config.dataIdFromObject({ __typename: 'Quote', id }))),
+    },
+  },
+});
 
 /**
  * Renders each component card
@@ -97,7 +108,7 @@ const Home = (): React.Element<typeof Query> => (
         <Page bg="#F5F6FA">
           {RenderHeader()}
           <Section padding="2.5rem">
-            {(data.quotes) ? RenderQuotes(data.quotes.reverse()) : ''}
+            {(data.quotes) ? RenderQuotes(data.quotes) : ''}
           </Section>
           <Link to="/quote/create">
             <CreateBtn>
