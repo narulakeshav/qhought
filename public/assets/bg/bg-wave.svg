@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="512px" viewBox="0 0 1920 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>wave</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1920" height="512"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wave">
+            <g id="Rectangle-12-Clipped">
+                <g>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="path-1"></g>
+                    <g id="Rectangle-12" mask="url(#mask-2)">
+                        <g transform="translate(0.000000, -721.000000)" id="Group">
+                            <g>
+                                <g fill="#FFFFFF" id="Path">
+                                    <g>
+                                        <path d="M0,0 L1920,0 L1920,1058.53173 L1920,1233 C1716,1132.27651 1491.66667,1087.91041 1247,1099.90171 C914.584185,1116.19366 860.630132,1196.20418 526,1181 C358.530145,1173.39088 183.196811,1102.72421 0,969"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
