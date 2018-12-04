@@ -2,7 +2,7 @@
  * External Dependencies
  */
 const webpack = require('webpack');
-const Dotenv = require('dotenv-webpack');
+// const Dotenv = require('dotenv-webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -55,7 +55,12 @@ module.exports = {
       template: './public/index.html' // serves Webpack bundles in html
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new Dotenv()
+    // new Dotenv({
+    //   path: (process.env.NODE_ENV) ? '.env.development' : '.env.production'
+    // })
+    new webpack.EnvironmentPlugin({
+      API_HOOK: 'http://localhost:8000/graphql'
+    })
   ],
   // Resolve extensions
   resolve: {

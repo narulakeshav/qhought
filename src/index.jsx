@@ -23,7 +23,6 @@ const client = new ApolloClient({
 // wrap your entire app tree in the ErrorBoundary provided
 const ErrorBoundary = BugsnagClient.getPlugin('react');
 
-// bugsnagClient.notify(new Error('Test error'));
 /**
  * Mount to DOM
  */
