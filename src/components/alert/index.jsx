@@ -34,12 +34,12 @@ type State = {
 };
 
 /**
- * LOCAL VARIABLES
+ * Local Variables
  */
 let T;
 
 /**
- * Renders Back Tab Button
+ * Renders Alert Banner
  * @param {Props} props
  */
 class AlertBanner extends React.Component<Props, State> {

@@ -35,6 +35,7 @@ type State = {
 /**
  * Local Variables
  */
+// Love Quote Mutation
 const LOVE_QUOTE = gql`
   mutation LoveQuote($id: ID!) {
     loveQuote(id: $id) {
@@ -47,6 +48,7 @@ const LOVE_QUOTE = gql`
   }
 `;
 
+// Unlove Quote Mutation
 const UN_LOVE_QUOTE = gql`
   mutation UnloveQuote($id: ID!) {
     unloveQuote(id: $id) {
@@ -59,6 +61,7 @@ const UN_LOVE_QUOTE = gql`
   }
 `;
 
+// Laugh Quote Mutation
 const LAUGH_QUOTE = gql`
   mutation LaughQuote($id: ID!) {
     laughQuote(id: $id) {
@@ -71,6 +74,7 @@ const LAUGH_QUOTE = gql`
   }
 `;
 
+// Unlaugh Quote Mutation
 const UN_LAUGH_QUOTE = gql`
   mutation UnlaughQuote($id: ID!) {
     unlaughQuote(id: $id) {
@@ -83,6 +87,7 @@ const UN_LAUGH_QUOTE = gql`
   }
 `;
 
+// Clap Quote Mutation
 const CLAP_QUOTE = gql`
   mutation ClapQuote($id: ID!) {
     clapQuote(id: $id) {
@@ -95,6 +100,7 @@ const CLAP_QUOTE = gql`
   }
 `;
 
+// Unclap Quote Mutation
 const UN_CLAP_QUOTE = gql`
   mutation UnclapQuote($id: ID!) {
     unclapQuote(id: $id) {
