@@ -4,8 +4,8 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ApolloProvider } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
 /**
  * Internal Dependencies
@@ -16,6 +16,8 @@ import { BugsnagContext, BugsnagClient } from './BugsnagContext';
 /**
  * Local Variables
  */
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`API_HOOK: ${process.env.API_HOOK}`);
 const client = new ApolloClient({
   uri: process.env.API_HOOK
 });
