@@ -15,10 +15,9 @@ import { BugsnagContext, BugsnagClient } from './BugsnagContext';
 
 /**
  * Local Variables
- * @TODO: Pass in env variable instead of fixed link
  */
 const client = new ApolloClient({
-  uri: 'http://localhost:8000/graphql'
+  uri: process.env.API_HOOK
 });
 
 // wrap your entire app tree in the ErrorBoundary provided

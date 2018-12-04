@@ -4,3 +4,4 @@
 # Internal
 .vscode/
 /dist/
+.env
