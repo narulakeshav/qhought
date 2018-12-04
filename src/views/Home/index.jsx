@@ -25,6 +25,7 @@ import {
   Section,
   GridSection,
   H5,
+  Span,
   Img
 } from '../../helpers/global';
 import { HomeHeader, GradientBtn, CreateBtn } from './styles';
@@ -89,13 +90,27 @@ const RenderHeader = () => (
       <Img
         src={Logo}
         alt="qhought"
-        width={4}
+        width="40px"
+        mobileWidth={40}
         margin="0.15rem 1rem 0.15rem 0"
+        mobileMargin="0.15rem 1rem 0.15rem 0"
         display="inline"
       />
       <H5 marginBottom>qhought</H5>
+      <Span>new</Span>
     </Link>
-    <GradientBtn>Add a Quote</GradientBtn>
+    <Section>
+      <a
+        href="https://github.com/narulakeshav/qhought"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GradientBtn default>Repo</GradientBtn>
+      </a>
+      <Link to="/quote/create">
+        <GradientBtn>Add a Quote</GradientBtn>
+      </Link>
+    </Section>
   </HomeHeader>
 );
 
