@@ -16,6 +16,9 @@ import Loading from '../LoadingScreen';
 import ErrorPage from '../ErrorPage';
 import Quote from '../../components/quote';
 
+// Logo
+import Logo from '../../../public/assets/qhought/logo.svg';
+
 // Global styles
 import {
   Page,
@@ -84,7 +87,7 @@ const RenderHeader = () => (
   <HomeHeader>
     <Link to="/">
       <Img
-        src="/assets/qhought/logo.svg"
+        src={Logo}
         alt="qhought"
         width={4}
         margin="0.15rem 1rem 0.15rem 0"

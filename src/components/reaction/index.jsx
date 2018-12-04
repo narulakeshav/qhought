@@ -12,6 +12,11 @@ import { Mutation } from 'react-apollo';
 import { QuoteReactions, ReactionBtn } from './styles';
 import { Img } from '../../helpers/global';
 
+// Assets
+import ClapSVG from '../../../public/assets/reactions/icon-clap.svg';
+import LaughSVG from '../../../public/assets/reactions/icon-laugh.svg';
+import LoveSVG from '../../../public/assets/reactions/icon-love.svg';
+
 /**
  * Flow Type
  */
@@ -154,8 +159,8 @@ class Reactions extends React.Component<Props, State> {
           }}
         >
           <Img
-            src={`/assets/reactions/icon-${icon}.svg`}
-            alt={icon}
+            src={icon}
+            alt={key}
             width={100}
             margin="0 0.75rem 0 0"
           />
@@ -173,19 +178,19 @@ class Reactions extends React.Component<Props, State> {
     return (
       <QuoteReactions {...this.props}>
         {this.ReactionItem(
-          'clap',
+          ClapSVG,
           'hasClapped',
           (hasClapped) ? claps + 1 : claps,
           (hasClapped) ? UN_CLAP_QUOTE : CLAP_QUOTE,
         )}
         {this.ReactionItem(
-          'laugh',
+          LaughSVG,
           'hasLaughed',
           (hasLaughed) ? laughs + 1 : laughs,
           (hasLaughed) ? UN_LAUGH_QUOTE : LAUGH_QUOTE,
         )}
         {this.ReactionItem(
-          'love',
+          LoveSVG,
           'hasLoved',
           (hasLoved) ? loves + 1 : loves,
           (hasLoved) ? UN_LOVE_QUOTE : LOVE_QUOTE
