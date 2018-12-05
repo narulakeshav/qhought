@@ -58,6 +58,10 @@ export const H1 = styled.h1`
   text-transform: ${(props) => (props.uppercase) ? 'uppercase' : 'none'};
   margin-bottom: ${(props) => (props.marginBottom) ? '8px' : '0'};
   line-height: ${(props) => (props.lineHeight) ? `${props.lineHeight}%` : '100%'};
+  text-shadow: ${(props) => (props.hasShadow)
+    ? '0 2px 6px rgba(0,0,0,0.1)'
+    : 'none'
+  };
 
   span {
     font-weight: ${(props) => setFontWeight(props, '800')};
@@ -84,6 +88,10 @@ export const H2 = styled.h2`
   text-transform: ${(props) => (props.uppercase) ? 'uppercase' : 'none'};
   margin-bottom: ${(props) => (props.marginBottom) ? '16px' : '0'};
   line-height: ${(props) => (props.lineHeight) ? `${props.lineHeight}%` : '100%'};
+  text-shadow: ${(props) => (props.hasShadow)
+    ? '0 3px 10px rgba(0,0,0,0.25)'
+    : 'none'
+  };
 
   span {
     font-weight: ${(props) => setFontWeight(props, '700')};
@@ -110,6 +118,10 @@ export const H3 = styled.h3`
   text-transform: ${(props) => (props.uppercase) ? 'uppercase' : 'none'};
   margin-bottom: ${(props) => (props.marginBottom) ? '8px' : '0'};
   line-height: ${(props) => (props.lineHeight) ? `${props.lineHeight}%` : '100%'};
+  text-shadow: ${(props) => (props.hasShadow)
+    ? '0 2px 6px rgba(0,0,0,0.1)'
+    : 'none'
+  };
 
   span {
     font-weight: ${(props) => setFontWeight(props, '700')};
@@ -136,6 +148,10 @@ color: ${(props) => setTextColor(props, COLORS.dark)};
   text-transform: ${(props) => (props.uppercase) ? 'uppercase' : 'none'};
   margin-bottom: ${(props) => (props.marginBottom) ? '8px' : '0'};
   line-height: ${(props) => (props.lineHeight) ? `${props.lineHeight}%` : '100%'};
+  text-shadow: ${(props) => (props.hasShadow)
+    ? '0 2px 6px rgba(0,0,0,0.1)'
+    : 'none'
+  };
 
   span {
     font-weight: ${(props) => setFontWeight(props, '700')};
@@ -162,6 +178,10 @@ export const H5 = styled.h5`
   text-transform: ${(props) => (props.uppercase) ? 'uppercase' : 'none'};
   margin-bottom: ${(props) => (props.marginBottom) ? '8px' : '0'};
   line-height: ${(props) => (props.lineHeight) ? `${props.lineHeight}%` : '100%'};
+  text-shadow: ${(props) => (props.hasShadow)
+    ? '0 2px 6px rgba(0,0,0,0.1)'
+    : 'none'
+  };
 
   span {
     font-weight: ${(props) => setFontWeight(props, '600')};
