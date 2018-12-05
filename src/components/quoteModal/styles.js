@@ -21,9 +21,10 @@ export const QuoteBackdrop = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(25,26,31,0.98);
+  background: rgba(255,255,255,0.85);
   transition: 0.15s all ease-in;
   opacity: 0;
+  cursor: pointer;
   animation: fadeIn 0.25s linear forwards;
 
   @keyframes fadeIn {
@@ -50,10 +51,11 @@ export const QuoteCover = styled.div`
   width: 90vw;
   height: 85vh;
   padding: 0;
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   z-index: 10000;
   transform: scale(0.85);
   opacity: 0;
+  background: red;
   background: ${(props) => (props.bg) ? props.bg : COLORS.white};
   background-attachment: cover;
   animation: scaleUp 0.25s linear 0.2s 1 forwards;
@@ -114,24 +116,8 @@ export const QuoteActions = styled(GridSection)`
   bottom: 0;
   left: 0;
   width: 90vw;
-  padding: 3rem 3.5rem;
+  padding: 2rem;
   border-radius: 0 0 1rem 1rem;
-
-  section {
-    justify-items: end;
-    align-items: start;
-  }
-
-  @media screen and (max-width: 925px) {
-    section {
-      display: flex;
-      justify-items: start;
-
-      * {
-        margin-right: 10px;
-      }
-    }
-  }
 `;
 
 /**
@@ -140,8 +126,8 @@ export const QuoteActions = styled(GridSection)`
  */
 export const CloseQuote = styled.button`
   position: fixed;
-  top: 9vh;
-  right: 6.5vw;
+  top: 2vh;
+  right: 1.5vw;
   background: transparent;
   width: 35px;
   height: 35px;
@@ -179,27 +165,5 @@ export const CloseQuote = styled.button`
  * @type button
  */
 export const ExpandQuote = styled(CloseQuote)`
-  position: fixed;
-  top: 9vh;
-  left: 6.5vw;
-  background: transparent;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  display: flex;
-  z-index: 10001;
-  transition: 0.15s all ease-in;
-  opacity: 0.75;
-  cursor: pointer;
-
-  i {
-    margin: auto;
-    color: ${COLORS.white};
-    font-size: 24px;
-    font-weight: 100;
-  }
-
-  &:hover {
-    opacity: 1;
-  }
+  left: 1.5vw;
 `;
