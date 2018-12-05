@@ -53,6 +53,13 @@ export const AlertBannerItem = styled(GridSection)`
   }
 `;
 
+/**
+ * BannerIcon
+ * @type div
+ *
+ * Styles the banner icon based on the type of
+ * error. Ex: red on 'error' | green on 'success'
+ */
 export const BannerIcon = styled.div`
   background: ${(props) => (props.color === 'error')
     ? ACTIONS.error
@@ -74,10 +81,18 @@ export const BannerIcon = styled.div`
   }
 `;
 
+/**
+ * BannerInfo
+ * @type Section
+ */
 export const BannerInfo = styled(Section)`
   padding: 4px 0;
 `;
 
+/**
+ * CloseBtn
+ * @type button
+ */
 export const CloseBtn = styled.button`
   cursor: pointer;
   background: transparent;

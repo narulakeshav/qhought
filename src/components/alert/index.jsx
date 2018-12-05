@@ -36,7 +36,7 @@ type State = {
 /**
  * Local Variables
  */
-let T;
+let durationTimeout;
 
 /**
  * Renders Alert Banner
@@ -49,14 +49,14 @@ class AlertBanner extends React.Component<Props, State> {
 
   // Default Props
   static defaultProps = {
-    duration: 115000
+    duration: 5000
   };
 
   /**
    * Set timeout to hide in x seconds.
    */
   componentDidMount = () => {
-    T = setTimeout(() => {
+    durationTimeout = setTimeout(() => {
       this.setState({
         show: false
       });
@@ -77,18 +77,18 @@ class AlertBanner extends React.Component<Props, State> {
    * doesn't hide.
    */
   onMouseEnter = () => {
-    clearTimeout(T);
+    clearTimeout(durationTimeout);
   }
 
   /**
    * Set Timeout to show = false in 5s
    */
   onMouseLeave = () => {
-    T = setTimeout(() => {
+    durationTimeout = setTimeout(() => {
       this.setState({
         show: false
       });
-    }, 115000);
+    }, 5000);
   }
 
   // Render
