@@ -40,5 +40,5 @@ export const QuoteCard = styled(GridSection)`
  * @type Section
  */
 export const QuoteText = styled(Section)`
-  padding: 0 3rem;
+  padding: 1rem 3rem;
 `;
