@@ -19,6 +19,6 @@ export const TagItem = styled.div`
   border-radius: 40px;
   padding: 4px 1.25rem;
   text-align: center;
-  justify-self: center;
+  // justify-self: end;
   font: 700 ${FONT.size - 5}px ${FONT.family};
 `;
