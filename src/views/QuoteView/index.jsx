@@ -90,7 +90,6 @@ const RenderQuoteActions = (quote: Object): React.Element<typeof QuoteInfo> => (
  */
 const genBg = (bg: string): string => {
   const bgArr = bg.split('/');
-  bgArr[0] = bgArr[0].replace('rgba(0,0,0,0.4), rgba(0,0,0,0.2)', 'rgba(0,0,0,0.55), rgba(0,0,0,0.4)');
   bgArr[3] = '1920x1080';
   return bgArr.join('/');
 };
