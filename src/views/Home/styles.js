@@ -13,7 +13,7 @@ export const HomeHeader = styled.nav`
   grid-template-columns: 1fr 1fr;
   padding: 1rem 2.5rem;
   background: ${COLORS.white};
-  box-shadow: 0 30px 40px -10px rgba(0,0,0,0.045);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
   align-items: center;
 
   a {

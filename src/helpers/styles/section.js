@@ -15,6 +15,10 @@ export const Page = styled.div`
   min-height: 100vh;
   overflow-x: hidden;
   background: ${(props) => (props.bg) ? props.bg : 'none'};
+  max-height: ${(props) => (props.lockScroll)
+    ? '100vh'
+    : 'auto'
+  };
 `;
 
 /**
