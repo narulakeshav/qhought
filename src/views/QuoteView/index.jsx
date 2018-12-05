@@ -14,7 +14,7 @@ import ErrorPage from '../ErrorPage';
 import Reactions from '../../components/reaction';
 
 // Components
-import Tags from '../../components/tag';
+import Tags from '../../components/tags';
 import BackTabButton from '../../components/backTabButton';
 
 // Internal Styles

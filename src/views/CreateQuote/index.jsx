@@ -57,7 +57,6 @@ const CREATE_QUOTE = gql`
       message
       data {
         _id
-        quote
       }
     }
   }
@@ -81,6 +80,22 @@ class CreateQuote extends React.Component<Props, State> {
    */
   componentDidMount = () => {
     this.generateBg();
+  }
+
+  /**
+   * Generates the background from Unsplash and is updated
+   * if tag state is updated.
+   */
+  generateBg = () => {
+    const { tags } = this.state;
+    const URL = (tags.length > 0)
+      ? `${UNSPLASH_URL}/?${tags.trim()}`
+      : `${UNSPLASH_URL}/?nature`;
+
+    const bgUrl = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)),url("${URL}") no-repeat center`;
+    this.setState({
+      bgUrl
+    });
   }
 
   /**
@@ -142,22 +157,6 @@ class CreateQuote extends React.Component<Props, State> {
         errorMsg: true
       });
     }
-  }
-
-  /**
-   * Generates the background from Unsplash and is updated
-   * if tag state is updated.
-   */
-  generateBg = () => {
-    const { tags } = this.state;
-    const URL = (tags.length > 0)
-      ? `${UNSPLASH_URL}/?${tags.trim()}`
-      : `${UNSPLASH_URL}/?nature`;
-
-    const bgUrl = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)),url("${URL}") no-repeat center`;
-    this.setState({
-      bgUrl
-    });
   }
 
   /**
