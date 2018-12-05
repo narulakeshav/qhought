@@ -39,6 +39,7 @@ type State = {
 
 /**
  * Local Variables
+ * @TODO: Refactor and use fragments
  */
 // Love Quote Mutation
 const LOVE_QUOTE = gql`

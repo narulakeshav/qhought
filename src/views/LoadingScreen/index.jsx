@@ -11,6 +11,7 @@ import { Loading, LoadingInner, LoadingSpinner } from './styles';
 
 /**
  * Renders Loading Snipper when loading data from graphql
+ * @TODO: Add funny messages chosen randomly
  */
 const LoadingScreen = (): React.Element<typeof Loading> => (
   <Loading>
