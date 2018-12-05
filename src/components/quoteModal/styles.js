@@ -21,7 +21,7 @@ export const QuoteBackdrop = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(255,255,255,0.85);
+  background: rgba(24,26,31,0.95);
   transition: 0.15s all ease-in;
   opacity: 0;
   cursor: pointer;
@@ -117,7 +117,14 @@ export const QuoteActions = styled(GridSection)`
   left: 0;
   width: 90vw;
   padding: 2rem;
+  opacity: 0.15;
   border-radius: 0 0 1rem 1rem;
+  transition: 0.35s all ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 /**
